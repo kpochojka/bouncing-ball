@@ -20,37 +20,37 @@ async function init(): Promise<void> {
 
   // -- Feature variables:
   // - Ball size (number)
-  const ballSize = client.getFeatureFlagVariable({
+  const ballSize = await Kameleoon.API.Activation.getFeatureFlagVariable({
     visitorCode,
     featureKey,
     variableKey: "ball_size",
   }).value as number;
   // - Ball color (string)
-  const ballColor = client.getFeatureFlagVariable({
+  const ballColor = await Kameleoon.API.Activation.getFeatureFlagVariable({
     visitorCode,
     featureKey,
     variableKey: "ball_color",
   }).value as string;
   // - Ball speed (number)
-  const ballSpeed = client.getFeatureFlagVariable({
+  const ballSpeed = await Kameleoon.API.Activation.getFeatureFlagVariable({
     visitorCode,
     featureKey,
     variableKey: "ball_speed",
   }).value as number;
   // - Number of balls (number)
-  const ballsAmount = client.getFeatureFlagVariable({
+  const ballsAmount = await Kameleoon.API.Activation.getFeatureFlagVariable({
     visitorCode,
     featureKey,
     variableKey: "balls_amount",
   }).value as number;
   // - Randomize on bounce (boolean) - whether the color of the ball should change on bounce
-  const randomizeOnBounce = client.getFeatureFlagVariable({
+  const randomizeOnBounce = await Kameleoon.API.Activation.getFeatureFlagVariable({
     visitorCode,
     featureKey,
     variableKey: "randomize_on_bounce",
   }).value as boolean;
   // - Screen title (string)
-  const screenTitle = client.getFeatureFlagVariable({
+  const screenTitle = await Kameleoon.API.Activation.getFeatureFlagVariable({
     visitorCode,
     featureKey,
     variableKey: "title_text",
